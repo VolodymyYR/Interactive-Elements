@@ -1,0 +1,134 @@
+@use "sass:math";
+@import "https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900";
+
+@import "_reset.scss";
+
+body{
+    font-family: "Montserrat";
+    background: #19273e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border: 8px #19273e solid;
+    border-radius: 30px;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(000, 000, 000, 0.4), inset -5px -5px 15px rgb(255, 255, 255, 0.1), inset 5px 5px 15px rgb(000, 000, 000, 0.4);
+    // .container__form
+    &.signinForm{
+        & .form.signup {
+            display: none;
+        }
+        & .form.signin{
+            display: flex;
+        }
+    }
+    & .form.signin{
+        display: none;
+    }
+}
+.form {
+    & h1,
+    & h2{
+        font-size: 28px;
+        color: #FFF;
+        font-weight: 500;
+        &.form__title{
+            margin-bottom: 25px;
+        }
+    }
+    & > *:not(:last-child){
+        margin-bottom: 35px;
+    }
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // .form__title
+    &__title {
+    }
+
+    // .form__input-box
+    &__input-box {
+        width: 300px;
+    }
+
+    & input[type="submit"]{
+        box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(000, 000, 000, 0.4), inset -5px -5px 15px rgb(255, 255, 255, 0.1), inset 5px 5px 15px rgb(000, 000, 000, 0.4);
+        background-color: #00dfc4;
+        border-radius: 20px;
+        padding: 15px;
+        font-weight: 600;
+        color: #19273e;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:focus{
+            outline: 2px #ffffff solid;
+        }
+        &:hover{
+            background-color: #05f3d7;
+        }
+    }
+
+    & label{
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        & a{
+            font-weight: 600;
+            color: #fff;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.input-box-form {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(000, 000, 000, 0.4);
+    & input{
+        border-radius: 15px;
+        padding: 10px 20px 10px 45px;
+        color: #00dfc4;
+        outline: none;
+        &:valid ~ span,
+        &:focus ~ span{
+            color: #00dfc4;
+            border: 1px solid #00dfc4;
+            transform: translate(40px, -180%);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            letter-spacing: 0.1px;
+            background: #19273e;
+        }
+        &:valid,
+        &:focus{
+            border: 1px solid #00dfc4;
+        }
+    }
+    & span{
+        position: absolute;
+        padding: 10px 20px 10px 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        left: 0;
+        letter-spacing: 0.3px;
+        color: rgba(255, 255, 255, 0.4);
+        transition: all 0.3s ease;
+    }
+    & i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        left: 20px;
+        color: #00dfc4;
+        padding: 3px 0;
+        border-right: 2px solid #00dfc4;
+    }
+}

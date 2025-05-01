@@ -1,0 +1,224 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  min-height: 100vh;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: "Montserrat";
+  background: #19273e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  border: 8px #19273e solid;
+  border-radius: 30px;
+  -webkit-box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.container.signinForm .form.signup {
+  display: none;
+}
+.container.signinForm .form.signin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.container .form.signin {
+  display: none;
+}
+
+.form {
+  padding: 25px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.form h1, .form h2 {
+  font-size: 28px;
+  color: #FFF;
+  font-weight: 500;
+}
+.form h1.form__title, .form h2.form__title {
+  margin-bottom: 25px;
+}
+.form > *:not(:last-child) {
+  margin-bottom: 35px;
+}
+.form__input-box {
+  width: 300px;
+}
+.form input[type=submit] {
+  -webkit-box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+  background-color: #00dfc4;
+  border-radius: 20px;
+  padding: 15px;
+  font-weight: 600;
+  color: #19273e;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.form input[type=submit]:focus {
+  outline: 2px #ffffff solid;
+}
+.form input[type=submit]:hover {
+  background-color: #05f3d7;
+}
+.form label {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+.form label a {
+  font-weight: 600;
+  color: #fff;
+}
+.form label a:hover {
+  text-decoration: underline;
+}
+
+.input-box-form {
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.input-box-form input {
+  border-radius: 15px;
+  padding: 10px 20px 10px 45px;
+  color: #00dfc4;
+  outline: none;
+}
+.input-box-form input:valid ~ span, .input-box-form input:focus ~ span {
+  color: #00dfc4;
+  border: 1px solid #00dfc4;
+  -webkit-transform: translate(40px, -180%);
+      -ms-transform: translate(40px, -180%);
+          transform: translate(40px, -180%);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  letter-spacing: 0.1px;
+  background: #19273e;
+}
+.input-box-form input:valid, .input-box-form input:focus {
+  border: 1px solid #00dfc4;
+}
+.input-box-form span {
+  position: absolute;
+  padding: 10px 20px 10px 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  left: 0;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.input-box-form i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  left: 20px;
+  color: #00dfc4;
+  padding: 3px 0;
+  border-right: 2px solid #00dfc4;
+}

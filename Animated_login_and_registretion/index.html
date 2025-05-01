@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Animated login and registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__form form signup">
+            <h1 class="form__title">Sign up</h1>
+            <div class="form__input-box input-box-form">
+                <input type="text" required="required" name="#" id="username">
+                <span>username</span>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="form__input-box input-box-form">
+                <input type="text" required="required">
+                <span>email address</span>
+                <i class='bx bx-envelope' ></i>
+            </div>
+            <div class="form__input-box input-box-form">
+                <input type="password" required="required">
+                <span>create password</span>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="form__input-box input-box-form">
+                <input type="password" required="required">
+                <span>confirm password</span>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <input type="submit" value="Create Account">
+            <label>Already a member? <a class="login" href="#">Login in</a></label>
+        </div>
+        <div action="#" class="form signin">
+            <h2 class="form__title">Sign in</h2>
+            <div class="form__input-box input-box-form">
+                <input type="text" required="required">
+                <span>email address</span>
+                <i class='bx bx-envelope' ></i>
+            </div>
+            <div class="form__input-box input-box-form">
+                <input type="password" required="required">
+                <span>password</span>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <input type="submit" value="Login">
+            <label>Not registered? <a class="create" href="#">Create an account</a></label>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
