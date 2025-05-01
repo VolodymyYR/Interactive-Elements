@@ -1,0 +1,73 @@
+@import url('reset.css');
+
+:root{
+    color-scheme: light dark;
+}
+
+body{
+    background: light-dark(#d3d3d3, #393939);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 100%;
+}
+.page {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+.page__items {
+    padding-inline: 20px;
+    display: flex;
+    column-gap: 20px;
+    inline-size: 100%;
+}
+.items {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.items__item {
+    border: 5px solid light-dark(#e2e2e2, #282828);
+    border-radius: 8px;
+    flex: 1 1 200px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    filter: brightness(0);
+
+    transition: .3s ease-out all;
+}
+
+.items__item img{
+    aspect-ratio: 2 / 3;
+    inline-size: 100%;
+    object-fit: cover;
+}
+
+.items__item:hover{
+    transform: translate3d(0, -15px, 90px);
+    filter: brightness(1);
+}
+
+.items__item:hover + *{
+    transform: translate3d(0, -10px, 60px) rotateY(20deg);
+    filter: brightness(0.7);
+}
+
+.items__item:hover + * + *{
+    transform: translate3d(0, -5px, 20px);
+    filter: brightness(0.3);
+}
+
+.items__item:has(+ :hover){
+    transform: translate3d(0, -10px, 60px) rotateY(-20deg);
+    filter: brightness(0.7);
+}
+
+.items__item:has(+ * +:hover){
+    transform: translate3d(0, -5px, 20px);
+    filter: brightness(0.3);
+}
