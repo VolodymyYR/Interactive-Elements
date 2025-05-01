@@ -1,0 +1,254 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900&display=swap);
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #bcbcbc;
+}
+
+.clock {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+  background-color: #bcbcbc;
+  -webkit-box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), -15px -15px 35px rgba(255, 255, 255, 0.55), inset 15px 15px 10px rgba(255, 255, 255, 0.75), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), -15px -15px 35px rgba(255, 255, 255, 0.55), inset 15px 15px 10px rgba(255, 255, 255, 0.75), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  z-index: 85;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef2838;
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+          box-shadow: 0 0 0 1px #ffffff;
+}
+
+.numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  inset: 35px;
+  background-color: #3c3173;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 15px #3c3173, -6px -6px 10px rgb(255, 255, 255), inset 5px 5px 5px rgba(255, 255, 255, 0.55);
+          box-shadow: 5px 5px 15px #3c3173, -6px -6px 10px rgb(255, 255, 255), inset 5px 5px 5px rgba(255, 255, 255, 0.55);
+}
+.numbers::before {
+  content: "";
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#42baee), to(#ef2838));
+  background: linear-gradient(#42baee, #ef2838);
+  width: 71%;
+  height: 71%;
+  border-radius: 50%;
+  -webkit-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear;
+}
+.numbers::after {
+  content: "";
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+      -ms-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0);
+  background: #3c3173;
+  width: 68%;
+  height: 68%;
+  border-radius: 50%;
+}
+.numbers span {
+  position: absolute;
+  text-align: center;
+  inset: 5px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  -webkit-transform: rotate(calc(90deg * var(--i)));
+      -ms-transform: rotate(calc(90deg * var(--i)));
+          transform: rotate(calc(90deg * var(--i)));
+}
+.numbers span b {
+  -webkit-transform: rotate(calc(-90deg * var(--i)));
+      -ms-transform: rotate(calc(-90deg * var(--i)));
+          transform: rotate(calc(-90deg * var(--i)));
+  display: inline-block;
+}
+
+.circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 75;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.circle i {
+  position: absolute;
+  height: 50px;
+  width: 3px;
+  background: #ffffff;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  border-radius: 3px;
+}
+.circle#hr i {
+  width: 4px;
+  height: 30px;
+}
+.circle#sc i {
+  width: 2px;
+  height: 65px;
+  background-color: #ef2838;
+  -webkit-box-shadow: 0 -20px #ef2838;
+          box-shadow: 0 -20px #ef2838;
+}
+
+#hr {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,123 @@
+@use "sass:math";
+@import "_reset.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900&display=swap);
+body{
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #bcbcbc;
+}
+.clock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    background-color: #bcbcbc;
+    box-shadow: 30px 30px 30px -10px rgb(0, 0, 0, 0.15), -15px -15px 35px rgb(255, 255, 255, 0.55), inset 15px 15px 10px rgb(255, 255, 255, 0.75), inset -1px -1px 10px rgb(0, 0, 0, 0.2);
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: 85;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ef2838;
+        box-shadow: 0 0 0 1px #ffffff;
+    }
+}
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 35px;
+    background-color: #3c3173;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px #3c3173, -6px -6px 10px rgb(255, 255, 255, 1), inset 5px 5px 5px rgb(255, 255, 255, 0.55);
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: 50;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(#42baee, #ef2838);
+        width: 71%;
+        height: 71%;
+        border-radius: 50%;
+        animation: rotate 5s infinite linear;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: 50;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0);
+        background: #3c3173;
+        width: 68%;
+        height: 68%;
+        border-radius: 50%;
+    }
+    & span{
+        position: absolute;
+        text-align: center;
+        inset: 5px;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        transform: rotate(calc(90deg * var(--i)));
+        & b{
+            transform: rotate(calc(-90deg * var(--i)));
+            display: inline-block;
+        }
+    }
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 75;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+    & i{
+        position: absolute;
+        height: 50px;
+        width: 3px;
+        background: #ffffff;
+        transform-origin: bottom;
+        border-radius: 3px;
+    }
+    &#hr i{
+        width: 4px;
+        height: 30px;
+    }
+    &#sc i{
+        width: 2px;
+        height: 65px;
+        background-color: #ef2838;
+        box-shadow: 0 -20px #ef2838;
+    }
+}
+
+#hr{
+    transform: rotate(0deg);
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
