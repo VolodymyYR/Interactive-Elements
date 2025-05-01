@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	display: inline-block;
+}
+
+html,
+body {
+	height: 100%;
+	min-width: 320px
+}
+
+body {
+	color: #130f0f;
+	line-height: 1.2;
+	font-family: "Montserrat";
+	font-size: 20px;
+}
+
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(3,55,55,1) 2%, rgba(0,215,6,1) 100%);
+
+}
+
+.container{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* ================================================================= */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    inline-size: 100%;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.card {
+    flex: 1 0 280px;
+    padding: 15px;
+    background-color: rgba(235, 235, 235, 0.2);
+}
+
+.card img{
+    inline-size: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-block-end: 20px;
+}
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    position: relative;
+    overflow: auto;
+    height: 300px;
+}
+
+.card__title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card__text{
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="cards">
+                <article class="card">
+                    <img src="img/pexels-jplenio-1632790.jpg" alt="Image">
+                    <div class="card__body">
+                        <h2 class="card__title">Title 1</h2>
+                        <div class="card__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quis magna vel vestibulum. Etiam egestas massa purus, ac commodo erat ornare quis. Praesent eu libero vel orci vulputate tincidunt. Pellentesque purus metus, imperdiet vitae pretium non, facilisis ut tortor. Aliquam vel lorem eu orci iaculis vehicula. Nam feugiat leo nec eleifend congue. Sed quis sem venenatis, accumsan dolor quis, tincidunt urna. Nulla commodo sem quis libero egestas, nec consequat sem tristique. Nunc malesuada arcu quam, в interdum turpis tincidunt vitae.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="img/pexels-mali-142497.jpg" alt="Image">
+                    <div class="card__body">
+                        <h2 class="card__title">Title 2</h2>
+                        <div class="card__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quis magna vel vestibulum. Etiam egestas massa purus, ac commodo erat ornare quis. Praesent eu libero vel orci vulputate tincidunt. Pellentesque purus metus, imperdiet vitae pretium non, facilisis ut tortor. Aliquam vel lorem eu orci iaculis vehicula. Nam feugiat leo nec eleifend congue. Sed quis sem venenatis, accumsan dolor quis, tincidunt urna.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card" data-tilt data-tilt-perspective="1500">
+                    <img src="img/pexels-pixabay-53435.jpg" alt="Image">
+                    <div class="card__body">
+                        <h2 class="card__title">Title 3</h2>
+                        <div class="card__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quis magna vel vestibulum. Etiam egestas massa purus, ac commodo erat ornare quis. Praesent eu libero vel orci vulputate tincidunt. Pellentesque purus metus, imperdiet vitae pretium non, facilisis ut tortor. Aliquam vel lorem eu orci iaculis vehicula. Nam feugiat leo nec eleifend congue. Sed quis sem venenatis, accumsan dolor quis, tincidunt urna. Nulla commodo sem quis libero egestas, nec consequat sem tristique. Nunc malesuada arcu quam, в interdum turpis tincidunt vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quis magna vel vestibulum. Etiam egestas massa purus, ac commodo erat ornare quis. Praesent eu libero vel orci vulputate tincidunt. Pellentesque purus metus, imperdiet vitae pretium non, facilisis ut tortor. Aliquam vel lorem eu orci iaculis vehicula. Nam feugiat leo nec eleifend congue. Sed quis sem venenatis, accumsan dolor quis, tincidunt urna. Nulla commodo sem quis libero egestas, nec consequat sem tristique. Nunc malesuada arcu quam, в interdum turpis tincidunt vitae.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 15,
+            speed: 600,
+            perspective: 1800,
+            glare: true,
+            "max-glare": 1,
+            reverse: true,
+        });
+    </script>
+</body>
+</html>
