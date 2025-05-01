@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Animated login page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container_sign sign-up">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon _icon-google"></a>
+                    <a href="#" class="icon _icon-instagram"></a>
+                    <a href="#" class="icon _icon-facebook"></a>
+                    <a href="#" class="icon _icon-linkedin"></a>
+                </div>
+                <h2>or use yore email for registration</h2>
+                <input id="name" type="text" placeholder="Name">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Password">
+                <button>Sign in</button>
+            </form>
+        </div>
+        <div class="container_sign sign-in">
+            <form action="#">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon _icon-google"></a>
+                    <a href="#" class="icon _icon-instagram"></a>
+                    <a href="#" class="icon _icon-facebook"></a>
+                    <a href="#" class="icon _icon-linkedin"></a>
+                </div>
+                <h2>or use yore email passwords?</h2>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a class="foget-password" href="#">Forget your password?</a>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-lef">
+                    <h2>Welcome back!</h2>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hiden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h2>Hello friend!</h2>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hiden" id="regist">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
